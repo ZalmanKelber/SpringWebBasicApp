@@ -13,7 +13,7 @@ My First JSP!!!
 
 <p>current date is <%= date %></p>
 <p style="color: red;">${errorMessage}</p>
-<form action="/login.do" method="post">
+<form action="/spring-mvc/login.do" method="post">
 Enter your name <br>
 <input type="text" name="name"/> <br>
 Enter your password <br>
