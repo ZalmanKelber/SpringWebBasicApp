@@ -3,8 +3,7 @@
 <body>
     <div class="container">
         <%@ include file="fragments/nav.jspf" %>
-        <spring:message code="welcome.caption" />, ${name}
-        <p>view your todos at <a href="/list-todos">your todos page</a></p>
+        <h4>There was an error</h4>
     </div>
 <%@ include file="fragments/closingtags.jspf" %>
 </body>

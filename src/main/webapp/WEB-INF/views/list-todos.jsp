@@ -5,7 +5,7 @@
         <%@ include file="fragments/nav.jspf" %>
         <h3>Hello, ${name}</h3><br>
         <table class="table table-striped">
-            <caption>Your todos are:</caption>
+            <caption><spring:message code="todo.caption" /></caption>
             <thead>
                 <td>description:</td><td>date:</td><td>status</td>
             </thead>
