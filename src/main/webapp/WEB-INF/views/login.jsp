@@ -1,24 +1,22 @@
-<%@ page import="java.util.Date" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-Date date = new Date();
-%>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Yahoo!! (from jsp)</title>
-</head>
+<%@ include file="fragments/header.jspf" %>
 <body>
-My First JSP!!! 
-
-<p>current date is <%= date %></p>
-<p style="color: red;">${errorMessage}</p>
-<form action="/spring-mvc/login.do" method="post">
-Enter your name <br>
-<input type="text" name="name"/> <br>
-Enter your password <br>
-<input type="password" name="password" />
-<input type="submit">
-</form>
+    <%@ include file="fragments/nav.jspf" %>
+<div class="container">
+    <h3>Sign in</h3>
+    <p style="color: red;">${errorMessage}</p>
+    <form action="/login.do" method="post">
+        <fieldset class="form-group">
+            <flabel >Enter your name:</label>
+            <input name="name" type="text" class="form-control" required="required"/>
+        </fieldset>
+        <fieldset class="form-group">
+            <flabel >Password:</label>
+            <input name="password" type="password" class="form-control" required="required"/>
+        </fieldset>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+</div>
+<%@ include file="fragments/closingtags.jspf" %>
 </body>
 </html>

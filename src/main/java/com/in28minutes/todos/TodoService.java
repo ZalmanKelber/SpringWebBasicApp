@@ -42,4 +42,16 @@ public class TodoService {
 			}
 		}
 	}
+	
+	public Todo retrieveTodo(int id) {
+		return todos.stream()
+				.filter(todo -> todo.getId() == id).findFirst()
+				.orElse(null);
+	}
+
+	public void updateTodo(Todo todo) {
+		System.out.println(todo);
+		todos.remove(todo);
+		todos.add(todo);
+	}
 }

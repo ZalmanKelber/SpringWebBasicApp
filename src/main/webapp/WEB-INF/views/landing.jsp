@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Yahoo!! (from jsp)</title>
-</head>
+<%@ include file="fragments/header.jspf" %>
 <body>
-Welcome, ${name}
+    <div class="container">
+        <%@ include file="fragments/nav.jspf" %>
+        Welcome, ${name}
+        <p>view your todos at <a href="/list-todos">your todos page</a></p>
+    </div>
+<%@ include file="fragments/closingtags.jspf" %>
 </body>
 </html>
